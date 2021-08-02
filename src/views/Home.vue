@@ -1,0 +1,84 @@
+<template>
+  <div>
+
+      <section id="presentation">
+        <div class="cha-header-clip">
+            <header class="cha-header">
+                <Navlight/>
+            </header>
+        </div>
+        <kinesis-container class="h-100">
+          <div class="container padding-top">
+              <div class="row pt-5">
+                <article class="z-index-100 white-text col-md-7 col-sm-12 mt-5">
+                    <h1 class="mb-3">À la recherche d'un Développeur ?</h1>
+                    <p>Me voici ! Quelque peu numérisié, mais pas minimisé !</p>
+                    <p>Fervent concepteur logiciel, adepte de design et stratège en base de données, rare sont les limites à ma curiosité.</p>
+                    <p>Coderons-nous un bout de chemin ensemble ?</p>
+                    <button class="btn btn-outline-light rounded-50 mt-3 px-5">Portfolio</button>
+                </article>
+              </div>
+              <div class="row scroll-icon-row z-index-100 col-12 justify-content-center">
+                <a class="border rounded-50 scroll-icon-wrapper" href="#skills">
+                    <img class="scroll-icon" src="image/icon/down-arrow-white.png" alt="naviguer vers la section Mes compétences">
+                </a>
+              </div>
+              <div class="absolute-top-0">
+                  <kinesis-element :strength="10" type="depth">
+                  <img class="" src="image/3d-ui-2.png" />
+                </kinesis-element>
+                <div class="absolute-top-0">
+                  <kinesis-element :strength="20" type="depth">
+                  <img class="" src="image/3d-ui-1.png" />
+                </kinesis-element>
+                </div>
+                
+                </div>
+              <img src="image/me-4k-smile-no-bg-cropped.png" class="autoportrait" alt="Avatar en 3d de Slimen">
+          </div>
+        </kinesis-container>
+      </section>
+    
+
+      <Skills/>
+      <Portfolio/>
+      <MyJourney/>
+      <Contact/>
+  </div>
+
+</template>
+
+<style scoped>
+    
+</style>
+
+<script>
+  import Navlight from '../components/Layouts/Navlight'
+  import MyJourney from './MyJourney.vue'
+  import Skills from './Skills.vue'
+  import Portfolio from './Portfolio'
+  import Contact from './Contact'
+
+  export default {
+    components: {
+      Navlight,
+      Skills,
+      MyJourney,
+      Portfolio,
+      Contact
+    },
+    data() {
+      return {
+        vartest: 50,
+        zizi: ""
+      }
+    },
+    mounted(){
+    },
+    methods:{
+
+    }
+
+  }
+
+</script>
