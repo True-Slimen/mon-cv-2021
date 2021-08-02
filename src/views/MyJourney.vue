@@ -2,7 +2,7 @@
   <section id="my-journey">
     <div class="cha-header-clip" aria-hidden="true">
       <header class="cha-header">
-        <NavDark />
+        <NavDark class="" />
       </header>
     </div>
     <div class="container padding-top">
