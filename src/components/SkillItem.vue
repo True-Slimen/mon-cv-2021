@@ -20,7 +20,7 @@ export default {
   },
   props: {
     iconName: {
-      type : String,
+      type : Object,
       required: true
     },
     height: {

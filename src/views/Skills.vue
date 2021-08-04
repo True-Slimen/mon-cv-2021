@@ -1,16 +1,17 @@
 <template>
     <section id="skills">
-        <div class="cha-header-clip" aria-hidden="true">
-            <header class="cha-header">
+            <div class="cha-header-clip" aria-hidden="true">
+              <header class="cha-header">
                 <NavDark/>
-            </header>
-        </div>
-        <div class="container padding-top">
-            <div class="row col-12 justify-content-center">
-                <a class="border-purple rounded-50 scroll-icon-wrapper up-icon" href="#">
-                    <img class="scroll-icon" src="image/icon/up-arrow-small-purple.png" alt="naviguer vers la section de présentation">
-                </a>
+              </header>
+              <div class="cha-header-section">
+                <NavSectionDarkTwins
+                  :linkUp="'#'"
+                  :linkDown="'#portfolio'"
+                />
+              </div>
             </div>
+        <div class="container padding-top">
             <div class="mt-5">
               <h2>Compétences</h2>
              <p class="col-md-8 pl-0">Outre l'inséparable trio que forment <strong>Html</strong>, <strong>Css</strong> et <strong>Javascript</strong> je travail actuellement sur un stack full js avec Node et Vue en particulier. Cela ne veut pas dire que je ne connais pas le Php, avec qui j'ai réalisé en grande partie ma formation Concepteur logiciel.
@@ -60,11 +61,6 @@
                 </ul>
               </div>
             </div>
-            <div class="row scroll-icon-row col-12 justify-content-center">
-                <a class="border-purple rounded-50 scroll-icon-wrapper" href="#portfolio">
-                    <img class="scroll-icon" src="image/icon/down-arrow-small-purple.png" alt="naviguer vers la section portfolio">
-                </a>
-            </div>
         </div>
     </section>
 </template>
@@ -75,11 +71,13 @@
 
 <script>
     import NavDark from '@/components/Layouts/Navdark'
+    import NavSectionDarkTwins from '@/components/Layouts/NavSectionDarkTwins'
     import SkillItem from '@/components/SkillItem'
 
     export default {
         components: {
             NavDark,
+            NavSectionDarkTwins,
             SkillItem
         },
         props: {

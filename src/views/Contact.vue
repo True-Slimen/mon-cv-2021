@@ -4,21 +4,14 @@
       <header class="cha-header">
         <Navlight />
       </header>
+      <div class="cha-header-section">
+        <NavSectionLightUp
+          :linkUp="'#my-journey'"
+        />
+      </div>
     </div>
     <kinesis-container class="h-100">
       <div class="container padding-top">
-        <div class="row col-12 z-index-100 justify-content-center">
-          <a
-            class="border rounded-50 scroll-icon-wrapper up-icon"
-            href="#my-journey"
-          >
-            <img
-              class="scroll-icon"
-              src="image/icon/up-arrow-small.png"
-              alt="naviguer vers la section mon parcours"
-            />
-          </a>
-        </div>
         <div class="row">
           <article class="col-md-6 col-sm-12 mt-5 z-index-100">
             <h2 class="mb-3 white-text">Contact</h2>
@@ -66,6 +59,7 @@
         </div>
       </div>
     </kinesis-container>
+    <Footer/>
   </section>
 </template>
 
@@ -74,12 +68,16 @@
 
 <script>
 import Navlight from "../components/Layouts/Navlight";
+import NavSectionLightUp from "../components/Layouts/NavSectionLightUp";
 //import Timeline from '@/Components/Timeline'
+import Footer from './Footer'
 
 export default {
   components: {
     Navlight,
+    NavSectionLightUp,
     //Timeline
+    Footer
   },
   props: {},
   data() {

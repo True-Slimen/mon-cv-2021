@@ -4,25 +4,21 @@
       <header class="cha-header">
         <Navlight />
       </header>
+      <div class="cha-header-section">
+        <NavSectionLightTwins
+          :linkUp="'#skills'"
+          :linkDown="'#my-journey'"
+        />
+      </div>
     </div>
     <div class="container padding-top">
-      <div class="row col-12 justify-content-center">
-        <a class="border rounded-50 scroll-icon-wrapper up-icon" href="#skills">
-          <img
-            class="scroll-icon"
-            src="image/icon/up-arrow-small.png"
-            alt="naviguer vers la section mes compétences"
-          />
-        </a>
-      </div>
-
       <h2 class="white-text mt-5">Portfolio</h2>
-      <p class="white-text">
+      <p class="col-md-8 pl-0 white-text">
         Que se soit au travers d'illustrations, d'interfaces attrayantes ou
         encore dans la conception de la logique en arrière plan j'aime mettre ma
         sensibilité et ma logique en application.
       </p>
-      <p class="white-text">
+      <p class="col-md-8 pl-0 white-text">
         Si il y a bien un atout dans le métier de développeur, c'est la
         possiblité de pratiquer des aspects de prime abord sans liens et qui
         pourtant, se révèlent complémentaire.
@@ -50,15 +46,6 @@
           </div>
         </article>
       </div>
-      <div class="row scroll-icon-row col-12 justify-content-center">
-        <a class="border rounded-50 scroll-icon-wrapper" href="#my-journey">
-          <img
-            class="scroll-icon"
-            src="image/icon/down-arrow-white.png"
-            alt="naviguer vers la section à propos"
-          />
-        </a>
-      </div>
     </div>
   </section>
 </template>
@@ -68,11 +55,13 @@
 
 <script>
 import Navlight from "@/components/Layouts/Navlight";
+import NavSectionLightTwins from "@/components/Layouts/NavSectionLightTwins";
 
 export default {
   components: {
     Navlight,
-  },
+    NavSectionLightTwins,
+    },
   props: {},
   data() {
     return {};

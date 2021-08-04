@@ -4,17 +4,14 @@
       <header class="cha-header">
         <NavDark class="" />
       </header>
+      <div class="cha-header-section">
+        <NavSectionDarkTwins
+          :linkUp="'#portfolio'"
+          :linkDown="'#contact'"
+        />
+      </div>
     </div>
     <div class="container padding-top">
-      <div class="row col-12 justify-content-center">
-        <a class="border-purple rounded-50 scroll-icon-wrapper up-icon" href="#portfolio">
-          <img
-            class="scroll-icon"
-            src="image/icon/up-arrow-small-purple.png"
-            alt="naviguer vers la section de portfolio"
-          />
-        </a>
-      </div>
       <div class="row">
         <div class="text-center justify-content-center mt-4 mb-3 col-12 row">
           <!-- <input class="mx-auto" v-model="timelineState" value="false" type="checkbox" id="switch" /><label class="mx-auto switch" for="switch">Toggle</label> -->
@@ -33,15 +30,6 @@
         </div>
         <Timeline :timelineState="timelineState" />
       </div>
-      <div class="row scroll-icon-row col-12 justify-content-center">
-        <a class="border-purple rounded-50 scroll-icon-wrapper" href="#contact">
-          <img
-            class="scroll-icon"
-            src="image/icon/down-arrow-small-purple.png"
-            alt="naviguer vers la section de Contact"
-          />
-        </a>
-      </div>
     </div>
   </section>
 </template>
@@ -51,11 +39,13 @@
 
 <script>
 import NavDark from "@/components/Layouts/Navdark";
+import NavSectionDarkTwins from "@/components/Layouts/NavSectionDarkTwins";
 import Timeline from "@/components/Timeline";
 
 export default {
   components: {
     NavDark,
+    NavSectionDarkTwins,
     Timeline,
   },
   props: {},
