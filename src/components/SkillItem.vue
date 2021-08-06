@@ -1,5 +1,5 @@
 <template>
-    <kinesis-container class="p-3 fit-content mx-auto">
+    <kinesis-container :class="iconWrapperClass">
       <kinesis-element :strength="15" type="depth">
         <img class="h-10" :src="createIconPath()" :alt="createIconAlt()" />
       </kinesis-element>
@@ -19,6 +19,10 @@ export default {
 
   },
   props: {
+    iconWrapperClass: {
+      type: String,
+      required: false
+    },
     iconName: {
       type : Object,
       required: true

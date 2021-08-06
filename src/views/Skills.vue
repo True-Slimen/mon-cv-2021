@@ -22,6 +22,7 @@
                    <li>
                     <SkillItem
                       :iconName="icon"
+                      :iconWrapperClass="'p-3 fit-content mx-auto'"
                     />
                   </li>
                  </div>

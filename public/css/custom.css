@@ -18,7 +18,7 @@ header .vs-popup{
 
 body{
     /* overflow: hidden; */
-    background-color: antiquewhite;
+    background-color: #e6e6e6;
 }
 
 h1{
@@ -170,10 +170,34 @@ li{
     border: 1px solid rgb(146, 36, 255);;
 }
 
+.margin-top-page{
+    margin-top: 200px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+ }
+
 .white-btn{
     background-color: white;
     border-radius: 50px;
     color: rgb(91, 0, 182)!important;
+}
+
+.{
+    font-size: 18px!important;
+    font-weight: 500!important;
+    padding-bottom: 0;
+}
+
+.nav-link-sub{
+    font-size: 16px!important;
+    padding:  0 0 0 20px!important;
+
+}
+
+.margin-60-bottom{
+    margin-bottom: 100px;
 }
 
 .purple-btn{

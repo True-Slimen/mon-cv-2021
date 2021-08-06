@@ -42,8 +42,17 @@
               Portfolio
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <router-link to="/graphisme" class="nav-link text-secondary">
+              <router-link to="/graphisme" class="nav-link  text-secondary">
                 Graphisme
+              </router-link>
+              <router-link to="/illustration" class="nav-link nav-link-sub text-secondary">
+                Illustrations
+              </router-link>
+              <router-link to="/parallax" class="nav-link nav-link-sub text-secondary">
+                Parallax
+              </router-link>
+              <router-link to="/logo" class="nav-link nav-link-sub text-secondary">
+                Logos
               </router-link>
               <router-link to="/developpement" class="nav-link text-secondary">
                 Développement

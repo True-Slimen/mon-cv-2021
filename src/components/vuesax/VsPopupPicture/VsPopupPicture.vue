@@ -1,35 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@True-Slimen 
-lusaxweb
-/
-vuesax
-127
-5.2k705
-Code
-Issues
-339
-Pull requests
-42
-Actions
-Projects
-Wiki
-Security
-Insights
-vuesax/src/components/vsPopup/vsPopup.vue
-@BekStar7
-BekStar7 feat: add subtitle slot in vsPopup
-Latest commit e3b86c7 on 5 Aug 2020
- History
- 6 contributors
-@luisDanielRoviraContreras@jacrys@guastallaigor@gtg3vv@BekStar7@deepak-nulu
-153 lines (150 sloc)  3.23 KB
-  
 <template lang="html">
   <transition name="popup-t">
     <div
