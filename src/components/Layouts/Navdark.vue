@@ -3,7 +3,7 @@
     <div class="row col-12 mx-auto">
       <div class="col-1 row">
         <a class="navbar-brand mx-auto" href="#">
-          <img src="image/touche-purple-PETIT.svg" alt="" />
+          <img src="image/touche-purple-PETIT.svg" alt="logo Slimen Metatidj" />
         </a>
       </div>
       <button
@@ -34,9 +34,6 @@
           <li class="nav-item active row">
             <a class="mx-auto" href="#skills">Mes compétences</a>
           </li>
-          <li class="nav-item active row">
-            <a class="mx-auto" href="#my-journey">Mon parcours</a>
-          </li>
           <li class="nav-item active dropdown">
             <a class="nav-link dropdown-toggle py-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Portfolio
@@ -58,6 +55,9 @@
                 Développement
               </router-link>
             </div>
+          </li>
+          <li class="nav-item active row">
+            <a class="mx-auto" href="#my-journey">Mon parcours</a>
           </li>
           <li class="nav-item row">
             <a class="mx-auto purple-btn px-3 py-0" href="#contact">Contact</a>

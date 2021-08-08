@@ -19,7 +19,11 @@
                   <p>Me voici ! Quelque peu numérisié, mais pas minimisé !</p>
                   <p>Fervent concepteur logiciel, adepte de design et stratège en base de données, rare sont les limites à ma curiosité.</p>
                   <p>Coderons-nous un bout de chemin ensemble ?</p>
-                  <button class="btn btn-outline-light rounded-50 mt-3 px-5">Portfolio</button>
+                  <a href="#portfolio">
+                    <button class="btn btn-outline-light rounded-50 mt-3 px-5">
+                      Portfolio
+                    </button>
+                  </a>
               </article>
             </div>
             <div class="absolute-top-0">
@@ -41,6 +45,7 @@
     <Portfolio/>
     <MyJourney/>
     <Contact/>
+    <Footer/>
   </div>
 
 </template>
@@ -56,7 +61,7 @@
   import Skills from '@/views/Skills.vue'
   import Portfolio from '@/views/Portfolio'
   import Contact from '@/views/Contact'
-  //import Footer from './Footer'
+  import Footer from './Footer'
 
   export default {
     components: {
@@ -66,7 +71,7 @@
       MyJourney,
       Portfolio,
       Contact,
-      //Footer
+      Footer
     },
     data() {
       return {

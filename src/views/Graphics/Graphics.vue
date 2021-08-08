@@ -1,15 +1,10 @@
 <template>
   <div>
-    <section id="graphics">
+    <section id="graphics" class="mb-5">
       <div >
         <header class="fixed-top">
           <NavDarkExternal />
         </header>
-        <div>
-          <NavSectionDarkDown
-            :linkDown="'#illustration'"
-          />
-        </div>
       </div>
       <div class="container padding-top">
         <h1 class=" mt-5">Graphisme</h1>
@@ -28,36 +23,38 @@
           <article class="col-md-4 col-12">
             <h3 class="text-center mt-5 mb-3">Illustration</h3>
             <div class="img-card-wrapper">
-              <a href="/illustration">
+              <router-link to="/illustration">
                 <img
                   class="img-card"
                   src="image/purple-desert-thumbnail.jpg"
-                  alt=""
+                  alt="Miniature de l'illustration Purple Desert"
                 />
-              </a>
+              </router-link>
             </div>
           </article>
           <article class="col-md-4 col-12">
             <h3 class="text-center mt-5 mb-3">Parallax</h3>
             <div class="img-card-wrapper">
-              <a href="/parallax">
+              <router-link to="/parallax">
                 <img
                   class="img-card"
-                  src="image/purple-desert-thumbnail.jpg"
-                  alt=""
+                  src="image/parallax-thumbnail.jpg"
+                  alt="Miniature du parallax Monolith"
                 />
-              </a>
+              </router-link>
             </div>
           </article>
           <article class="col-md-4 col-12">
             <h3 class="text-center mt-5 mb-3">Logos</h3>
             <div class="img-card-wrapper">
-              <a href="/logo">
+              <router-link to="/parallax">
                 <img
                   class="img-card"
                   src="image/progenythumbnail.jpg"
-                  alt=""
+                  alt="Miniature du logo progeny"
                 />
+              </router-link>
+              <a href="/logo">
               </a>
             </div>
           </article>
@@ -73,14 +70,12 @@
 
 <script>
 import NavDarkExternal from "@/components/Layouts/NavDarkExternal";
-import NavSectionDarkDown from "@/components/Layouts/NavSectionDarkDown";
 import Footer from '@/views/Footer'
 
 
 export default {
   components: {
     NavDarkExternal,
-    NavSectionDarkDown,
     Footer
   },
   props: {},

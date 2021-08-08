@@ -21,53 +21,12 @@
             </div>
           </div>
         </div>
-        <article class="flatscape-phone-wrapper jsutify-content-center mt-4 mb-5 col-12 mx-auto">
+        <article class="mx-auto">
           <img
             class="cursor-pointer"
-            src="image/portfolio/illustration/flat-scape/portrait/desert-alone.jpg"
+            src="image/portfolio/graphics/logo/progeny.jpg"
             alt="Dessin numérique d'un homme perdue dans le desert"
             @click="openModal('image/portfolio/illustration/flat-scape/portrait/desert-alone.jpg')"
-          />
-          <img
-            class="cursor-pointer"
-            src="image/portfolio/illustration/flat-scape/portrait/purple-desert.jpg"
-            alt="Dessin numérique de deux personnages admirant des étoiles filantes dans un desert extra-terrestre"
-            @click="openModal('image/portfolio/illustration/flat-scape/portrait/purple-desert.jpg')"
-          />
-          <img
-            class="cursor-pointer"
-            src="image/portfolio/illustration/flat-scape/portrait/sky-cities-1.jpg"
-            alt="Dessin numérique d'une ville sur un rocher flottant"
-            @click="openModal('image/portfolio/illustration/flat-scape/portrait/sky-cities-1.jpg')"
-          />
-
-          <img
-            class="cursor-pointer"
-            src="image/portfolio/illustration/flat-scape/portrait/sunrise-beach.jpg"
-            alt="Dessin numérique d'une montagne extra-terrestre."
-            @click="openModal('image/portfolio/illustration/flat-scape/portrait/sunrise-beach.jpg')"
-          />
-          <img
-            class="cursor-pointer"
-            src="image/portfolio/illustration/flat-scape/portrait/sunrise-mountain-3d.jpg"
-            alt="Dessin numérique d'une montagne extra-terrestre."
-            @click="openModal('image/portfolio/illustration/flat-scape/portrait/sunrise-mountain-3d.jpg')"
-          />
-        </article>
-        <article class="flatscape-landscape-wrapper jsutify-content-center mt-4 mb-5 col-12 mx-auto">
-          <img
-            class="cursor-pointer"
-            src="image/portfolio/illustration/flat-scape/paysage/red-xeno-desert.jpg"
-            alt="Dessin numérique d'une valée extra-terrestre."
-            @click="openModal('image/portfolio/illustration/flat-scape/paysage/red-xeno-desert.jpg')"
-          />
-        </article>
-        <article class="mt-4 mb-5 w-100">
-          <img
-            class="cursor-pointer w-100"
-            src="image/portfolio/illustration/flat-scape/paysage/skyscrapper.png"
-            alt="Dessin numérique d'une valée extra-terrestre."
-            @click="openModal('image/portfolio/illustration/flat-scape/paysage/skyscrapper.png')"
           />
         </article>
       </div>
@@ -102,11 +61,6 @@ export default {
           name: 'illustrator',
           displayName: 'Illustrator',
           alt: 'Illustrator'
-        },
-        photoshop: {
-          name: 'photoshop',
-          displayName: 'Photoshop',
-          alt: 'Photoshop'
         },
       },
       popupActivo2: false,

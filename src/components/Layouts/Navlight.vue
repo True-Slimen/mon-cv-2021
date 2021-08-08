@@ -34,9 +34,6 @@
           <li class="nav-item active row">
             <a class="mx-auto" href="#skills">Mes compétences</a>
           </li>
-          <li class="nav-item active row">
-            <a class="mx-auto" href="#my-journey">Mon parcours</a>
-          </li>
           <li class="nav-item active dropdown">
             <a class="nav-link dropdown-toggle py-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Portfolio
@@ -59,6 +56,9 @@
                 Développement
               </router-link>
             </div>
+          </li>
+          <li class="nav-item active row">
+            <a class="mx-auto" href="#my-journey">Mon parcours</a>
           </li>
           <li class="nav-item row">
             <a class="mx-auto btn rounded-50 btn-outline-light px-3 py-0"

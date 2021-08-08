@@ -2,7 +2,7 @@
   <nav class="navbar navLight navbar-expand-lg col-12">
     <div class="row col-12 mx-auto">
       <div class="col-1 row">
-        <a class="navbar-brand mx-auto" href="#">
+        <a class="navbar-brand mx-auto" href="/">
           <img src="image/touche-blanc-PETIT.svg" alt="" />
         </a>
       </div>
@@ -29,16 +29,13 @@
       >
         <ul class="navbar-nav col-12 ml-auto">
           <li class="nav-item ml-auto active row">
-            <a class="mx-auto" href="#presentation">Accueil</a>
+            <a class="mx-auto" href="/#presentation">Accueil</a>
           </li>
           <li class="nav-item active row">
-            <a class="mx-auto" href="#skills">Mes compétences</a>
-          </li>
-          <li class="nav-item active row">
-            <a class="mx-auto" href="/#my-journey">Mon parcours</a>
+            <a class="mx-auto" href="/#skills">Mes compétences</a>
           </li>
           <li class="nav-item active dropdown">
-            <a class="nav-link dropdown-toggle py-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle py-0" href="/#portfolio" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Portfolio
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -59,9 +56,12 @@
               </router-link>
             </div>
           </li>
+          <li class="nav-item active row">
+            <a class="mx-auto" href="/#my-journey">Mon parcours</a>
+          </li>
           <li class="nav-item row">
             <a class="mx-auto btn rounded-50 btn-outline-light px-3 py-0"
-              href="#contact">
+              href="/#contact">
               Contact
             </a>
           </li>

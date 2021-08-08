@@ -15,11 +15,15 @@
         <div class="row">
           <article class="col-md-6 col-sm-12 mt-5 z-index-100">
             <h2 class="mb-3 white-text">Contact</h2>
-            <form class="contact-form">
+            <form
+              class="contact-form"
+              @submit="onSubmit"
+            >
               <div class="form-group">
                 <!-- <label class="white-text" for="name">Nom</label> -->
                 <input
                   type="text"
+                  v-model="form.name"
                   class="form-control blur-3"
                   id="name"
                   placeholder="Nom"
@@ -29,26 +33,23 @@
                 <!-- <label class="white-text" for="email">Adresse email</label> -->
                 <input
                   type="email"
+                  v-model="form.email"
                   class="form-control blur-3"
                   id="email"
                   placeholder="Email"
                 />
               </div>
               <div class="form-group">
-                <!-- <label class="white-text" for="message">Votre message</label> -->
-                <textarea placeholder="Le message" class="form-control blur-3" id="message" rows="3"></textarea>
+                
+                <textarea 
+                  placeholder="Le message"
+                  v-model="form.message"
+                  class="form-control blur-3" 
+                  id="message" 
+                  rows="3">
+                </textarea>
               </div>
-              <div class="form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="exampleCheck1"
-                />
-                <label class="form-check-label" for="exampleCheck1"
-                  >Check me out</label
-                >
-              </div>
-              <button class="btn btn-outline-light rounded-50 mt-3 px-5">Envoyer</button>
+              <button type="submit" class="btn btn-outline-light rounded-50 mt-3 px-5">Envoyer</button>
             </form>
           </article>
           <div class="absolute-top-0 ">
@@ -56,10 +57,12 @@
             <img class="overflow-hidden col-12" src="image/envelope.png" />
           </kinesis-element>
           </div>
+          <!-- <div class="white-text">
+            {{ info }}
+          </div> -->
         </div>
       </div>
     </kinesis-container>
-    <Footer/>
   </section>
 </template>
 
@@ -69,24 +72,46 @@
 <script>
 import Navlight from "../components/Layouts/Navlight";
 import NavSectionLightUp from "../components/Layouts/NavSectionLightUp";
+const querystring = require("querystring");
 //import Timeline from '@/Components/Timeline'
-import Footer from './Footer'
+//import Footer from './Footer'
 
 export default {
   components: {
     Navlight,
     NavSectionLightUp,
     //Timeline
-    Footer
+    //Footer
   },
   props: {},
   data() {
-    return {};
+    return {
+      sent: false,
+      form: {
+
+      },
+      info: ''
+    };
+  },
+  created(){
+    this.$http
+      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+      .then(response => (this.info = response))
   },
   methods: {
-    test() {
-      alert("win win win");
-    },
+    onSubmit(e) {
+      e.preventDefault();
+      this.$http
+      .post(
+        "http://developpeur-metatidj.fr/mail.php",
+        querystring.stringify(this.form)
+      )
+      .then(res => {
+        console.log(res);
+        this.sent = true;
+      });
+      //"http://developpeur-metatidj.fr/mail.php"
+    }
   },
 };
 </script>

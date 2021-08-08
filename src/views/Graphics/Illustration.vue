@@ -5,14 +5,10 @@
         <header class="fixed-top">
           <NavDarkExternal />
         </header>
-        <div>
-          <NavSectionDarkDown
-            :linkDown="'#illustration'"
-          />
-        </div>
       </div>
       <div class="margin-top-page">
         <div class="container">
+          <h1>Illustrations</h1>
           <h3 class="mt-5">
             Illustration de style "Flatscape"
           </h3>
@@ -90,6 +86,7 @@
         />
       </VsPopupPicture>
     </section>
+    <Footer/>
   </div>
 </template>
 
@@ -98,16 +95,16 @@
 
 <script>
 import NavDarkExternal from "@/components/Layouts/NavDarkExternal";
-import NavSectionDarkDown from "@/components/Layouts/NavSectionDarkDown";
 import VsPopupPicture from '@/components/vuesax/VsPopupPicture/VsPopupPicture'
 import SkillItem from '@/components/SkillItem'
+import Footer from '@/views/Footer'
 
 export default {
   components: {
     NavDarkExternal,
-    NavSectionDarkDown,
     VsPopupPicture,
-    SkillItem
+    SkillItem,
+    Footer
   },
   props: {},
   data() {
