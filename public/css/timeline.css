@@ -37,7 +37,7 @@ body {
   background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%,  #a040ff 8%,  #a040ff 92%, rgba(80,80,80,0) 100%);
   background: linear-gradient(to bottom, rgba(80,80,80,0) 0%,  #a040ff 8%,  #a040ff 92%, rgba(80,80,80,0) 100%);
   
-  z-index: 5;
+  z-index: 0;
 }
 
 .timeline li {

@@ -15,9 +15,11 @@
         <div class="row">
           <article class="col-md-6 col-sm-12 mt-5 z-index-100">
             <h2 class="mb-3 white-text">Contact</h2>
+            <p class="white-text">Vous souhaitez me rencontrer ou vous avez une suggestion ?</p>
+            <p class="white-text">N'hésitez pas à laisser un message.</p>
             <form
               class="contact-form"
-              @submit="onSubmit"
+              @submit.prevent="onSubmit()"
             >
               <div class="form-group">
                 <!-- <label class="white-text" for="name">Nom</label> -->
@@ -26,6 +28,7 @@
                   v-model="form.name"
                   class="form-control blur-3"
                   id="name"
+                  required
                   placeholder="Nom"
                 />
               </div>
@@ -36,6 +39,7 @@
                   v-model="form.email"
                   class="form-control blur-3"
                   id="email"
+                  required
                   placeholder="Email"
                 />
               </div>
@@ -46,11 +50,17 @@
                   v-model="form.message"
                   class="form-control blur-3" 
                   id="message" 
+                  required
                   rows="3">
                 </textarea>
               </div>
               <button type="submit" class="btn btn-outline-light rounded-50 mt-3 px-5">Envoyer</button>
             </form>
+            <div class="mail-notify-wrapper">
+              <p class="mail-notify p-2">
+                {{ notifyMessage }}
+              </p>
+            </div>
           </article>
           <div class="absolute-top-0 ">
             <kinesis-element class="col-md-10" :strength="10" type="depth">
@@ -86,7 +96,7 @@ export default {
   props: {},
   data() {
     return {
-      sent: false,
+      notifyMessage: '',
       form: {
 
       },
@@ -94,24 +104,88 @@ export default {
     };
   },
   created(){
-    this.$http
-      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-      .then(response => (this.info = response))
   },
   methods: {
-    onSubmit(e) {
-      e.preventDefault();
+    onSubmit() {
       this.$http
       .post(
         "http://developpeur-metatidj.fr/mail.php",
         querystring.stringify(this.form)
       )
       .then(res => {
-        console.log(res);
-        this.sent = true;
+        console.log(res.data);
+        console.log(typeof(res.data));
+        if(res.data == true){
+          this.form = {};
+          this.showNotify(true);
+
+          console.log('dans le true');
+          //this.notifyMessage = 'Votre message a bien été envoyé, je vous répondrez rapidement. Merci de l\'intérêt porté à mon profil.'
+        }else{
+          this.showNotify(false);
+          console.log('dans le false');
+          //this.notifyMessage = 'Une erreur a empêché votre message de partir. Aucune crainte, je vais pouvoir lire son contenu. Merci de l\'intérêt porté à mon profil.'
+        }
       });
       //"http://developpeur-metatidj.fr/mail.php"
+    },
+    showNotify(sended){
+      console.log(sended);
+      console.log('ooooooh');
+      let notify = document.getElementsByClassName('mail-notify');
+      console.log(notify);
+      notify[0].classList.toggle("push-up-notify");
+      if (sended == false) {
+        notify[0].classList.add("notify-danger");
+        notify[0].classList.remove("notify-success");
+        this.notifyMessage = 'Une erreur a empêché votre message de partir. Aucune crainte, je vais pouvoir lire son contenu. Merci de l\'intérêt porté à mon profil.'
+      }else{
+        notify[0].classList.add("notify-success");
+        notify[0].classList.remove("notify-danger");
+        this.notifyMessage = 'Votre message a bien été envoyé, je vous répondrez rapidement. Merci de l\'intérêt porté à mon profil.'
+      }
+      setTimeout(() => { notify[0].classList.toggle("push-up-notify"); }, 5000);
+      
     }
   },
 };
 </script>
+<style>
+.mail-notify-wrapper{
+  position: relative;
+  height: 130px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.mail-notify{
+  top: 150px;
+  position: absolute;
+  padding: 10px;
+  color: white!important;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.6s;
+}
+
+.notify-danger{
+  background-color: rgb(255, 93, 93);
+  transition: all 0.6s;
+
+}
+
+.notify-success{
+  background-color: rgb(28, 167, 15);
+  transition: all 0.6s;
+
+}
+
+.push-up-notify{
+  top: 0px;
+  transition: all 0.3s;
+}
+
+form input, form textarea{
+  border-radius: 10px!important;
+}
+</style>

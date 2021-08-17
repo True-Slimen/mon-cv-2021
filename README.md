@@ -1,4 +1,4 @@
-# cv-front-only
+# slimen_metatidj
 
 ## Project setup
 ```

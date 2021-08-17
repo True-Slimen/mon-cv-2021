@@ -28,21 +28,18 @@
         <article class="col-md-5 col-12">
           <h3 class="text-center mt-5 mb-3">Graphisme</h3>
           <div class="img-card-wrapper">
-            <a href="/graphisme">
-              <img
-                class="img-card"
-                src="image/purple-desert-thumbnail.jpg"
-                alt=""
-              />
-            </a>
+            <router-link to="/graphisme" class="nav-link text-secondary">
+              <img class="img-card" src="image/purple-desert-thumbnail.jpg" alt=""
+            />
+            </router-link>
           </div>
         </article>
         <article class="col-md-5 col-12">
           <h3 class="text-center mt-5 mb-3">Développement</h3>
           <div class="img-card-wrapper">
-            <a href="/developpement">
-              <img class="img-card" src="image/screen_vdl.jpg" alt="" />
-            </a>
+            <router-link to="/developpement" class="nav-link text-secondary">
+                <img class="img-card" src="image/screen_vdl.jpg" alt="" />
+            </router-link>
           </div>
         </article>
       </div>

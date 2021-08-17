@@ -28,19 +28,27 @@
           <h6 class="mt-3">Graphisme</h6>
           <ul class="footer-nav col-12">
             <li class="footer-nav-item  active row">
-              <small><a class="" href="#presentation">Illustration</a></small>
+              <router-link to="/illustration" class="p-0">
+                <small class="white-text">Illustration</small>
+              </router-link>
             </li>
             <li class="footer-nav-item  active row">
-              <small><a class="" href="#parallax">Parallax</a></small>
+              <router-link to="/parallax" class="p-0">
+                <small>Parallax</small>
+              </router-link>
             </li>
             <li class="footer-nav-item active row">
-              <small><a class="" href="#skills">Logo</a></small>
+              <router-link to="/logo" class="p-0">
+                <small class="white-text">Logo</small>
+              </router-link>
             </li>
           </ul>
           <h6 class="mt-3">Développement</h6>
           <ul class="footer-nav col-12">
             <li class="footer-nav-item active row">
-              <small><a class="" href="#skills">Développement</a></small>
+              <router-link to="/developpement" class="p-0">
+                <small class="white-text">Développement</small>
+              </router-link>
             </li>
           </ul>
         </div>
@@ -70,7 +78,7 @@
         </div>
       </div>
       <div class="text-center mt-3">
-        <small><a class="mr-2" href="#skills">Mentions légales</a> Powered by Vue Js - Slimen Metatidj 2021</small>
+        <small>Powered by Vue Js - Slimen Metatidj 2021</small>
       </div>
     </footer>
   </section>

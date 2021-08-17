@@ -147,6 +147,10 @@ section{
     overflow: hidden!important;
 }
 
+.medium-icon img{
+    width: 45px;
+}
+
 .navDark{
     box-shadow: 0px 5px 20px #00000047;
 }
@@ -196,6 +200,14 @@ section{
 
 .fit-content{
     width: fit-content;
+}
+
+.small-icon img{
+    width: 30px;
+}
+
+.small-icon p{
+    font-size: 14px;
 }
 
 .skill-icon{
@@ -429,6 +441,7 @@ section{
 
 .img-card{
     border-radius: 8px;
+    box-shadow: 0px 6px 5px #00000045;
     position: relative;
     top: 0px;
     transition: all 0.2s;
@@ -436,7 +449,7 @@ section{
 }
 
 .img-card:hover{
-    box-shadow: 0px 10px 35px #00000045;
+    box-shadow: 0px 10px 20px #00000045;
     top: -3px;
     transition: all 0.2s;
     width: 100%;
@@ -534,6 +547,10 @@ input:checked + .switch:after {
     
     .absolute-top-0{
         display: none;
+    }
+
+    .small-icon img{
+        width: 30px;
     }
 }
 

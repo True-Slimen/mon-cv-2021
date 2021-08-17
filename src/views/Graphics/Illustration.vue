@@ -20,6 +20,7 @@
             <div class="text-center mx-right" v-for="(icon, index) in this.illustrator" :key="index">
               <li>
                 <SkillItem
+                  class="small-icon"
                   :height="50"
                   :iconName="icon"
                   :iconWrapperClass="'p-3 fit-content mx-right'"

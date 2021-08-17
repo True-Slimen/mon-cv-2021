@@ -1,17 +1,40 @@
 <?php
-
 if(isset($_POST['name'])){
-    $name = $_POST['name'];
-    $mail = $_POST['mail'];
-    $message = $_POST['message'];
+    $name = verify_data(($_POST['name']));
+    $email = verify_data(($_POST['email']));
+    $message = verify_data(($_POST['message']));
+}else{
+    echo "Formulaire vide.";
 }
 
-$to_email = 'metatidj.slimen@gmail.com';
-$subject = 'Un message de ' . $name;
-$headers[] = 'MIME-Version: 1.0';
-$headers[] = 'Content-type: text/html; charset=UTF-8';
-$headers[] = 'From: ' . $name;
+function verify_data($data){
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 
-mail($to_email, $subject, $message, implode("\r\n", $headers));
+if (!empty($name)
+    && !empty($email)
+    && !empty($message)
+    && filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $message.= ' Envoyer depuis : ' . $email;
+        $destinataire = 'metatidj.slimen@gmail.com';
+        $expediteur = $email;
+        $objet = 'Un message de ' . $name;
+        $headers  = 'MIME-Version: 1.0' . "\n";
+        $headers .= 'From: <'.$expediteur.'>'."\n";
+        $headers .= 'Delivered-to: '.$destinataire."\n";
+        if (mail($destinataire, $objet, $message, $headers))
+        {
+            echo 'true';
+        }
+        else
+        {
+            echo "false";
+        }
 
+    }else{
+        echo "Données invalides";
+    }
 ?>

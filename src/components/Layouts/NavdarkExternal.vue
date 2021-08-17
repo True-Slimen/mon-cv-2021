@@ -29,10 +29,14 @@
       >
         <ul class="navbar-nav col-12 ml-auto">
           <li class="nav-item ml-auto active row">
-            <a class="mx-auto" href="/#presentation">Accueil</a>
+            <router-link to="/" class="mx-auto">
+              Accueil
+            </router-link>
           </li>
           <li class="nav-item active row">
-            <a class="mx-auto" href="/#skills">Mes compétences</a>
+            <router-link to="/#skills" class="mx-auto">
+              Mes compétences
+            </router-link>
           </li>
           <li class="nav-item active dropdown">
             <a class="nav-link dropdown-toggle py-0" href="/#portfolio" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -57,13 +61,14 @@
             </div>
           </li>
           <li class="nav-item active row">
-            <a class="mx-auto" href="/#my-journey">Mon parcours</a>
+            <router-link to="/#my-journey" class="mx-auto">
+              Mon parcours
+            </router-link>
           </li>
           <li class="nav-item row">
-            <a class="mx-auto purple-btn btn-outline px-3 py-0"
-              href="/#contact">
+            <router-link to="/#contact" class="mx-auto purple-btn btn-outline px-3 py-0">
               Contact
-            </a>
+            </router-link>
           </li>
         </ul>
       </div>
@@ -74,3 +79,8 @@
 <script>
 export default {};
 </script>
+<style scoped>
+  nav{
+    background-color: rgb(230,230,230);
+  }
+</style>

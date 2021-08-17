@@ -47,7 +47,7 @@
           <article class="col-md-4 col-12">
             <h3 class="text-center mt-5 mb-3">Logos</h3>
             <div class="img-card-wrapper">
-              <router-link to="/parallax">
+              <router-link to="/logo">
                 <img
                   class="img-card"
                   src="image/progenythumbnail.jpg"
@@ -83,9 +83,7 @@ export default {
     return {};
   },
   methods: {
-    test() {
-      alert("win win win");
-    },
+
   },
 };
 </script>

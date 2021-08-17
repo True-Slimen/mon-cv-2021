@@ -16,9 +16,9 @@
             <div class="row pt-5">
               <article class="z-index-100 white-text col-md-7 col-sm-12 mt-5">
                   <h1 class="mb-3">À la recherche d'un Développeur ?</h1>
-                  <p>Me voici ! Quelque peu numérisié, mais pas minimisé !</p>
+                  <p>Me voici ! Quelque peu numérisé, mais pas minimisé !</p>
                   <p>Fervent concepteur logiciel, adepte de design et stratège en base de données, rare sont les limites à ma curiosité.</p>
-                  <p>Coderons-nous un bout de chemin ensemble ?</p>
+                  <p>Côderons-nous un bout de chemin ensemble ?</p>
                   <a href="#portfolio">
                     <button class="btn btn-outline-light rounded-50 mt-3 px-5">
                       Portfolio

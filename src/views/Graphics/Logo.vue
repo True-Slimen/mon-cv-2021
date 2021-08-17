@@ -35,7 +35,7 @@
                 <div class="text-center mx-right" v-for="(icon, index) in this.progenyIcon" :key="index">
                   <li>
                     <SkillItem
-                      :height="50"
+                      class="small-icon"
                       :iconName="icon"
                       :iconWrapperClass="'p-3 fit-content mx-right'"
                     />
@@ -47,14 +47,14 @@
           <article class="m-0 mt-4 mb-5 col-12 row">
             <h4 class="col-12 p-0">Garde Le Smile</h4>
             <div class="col-md-6">
-              <p>Garde Le Smile est une application pensé par un étuidant en informatique. Son but est de proposer une appli rassemblant planning, objectif, gestion de budget et d'hygiène de vie. Un lieu unique où chaque jeune pourrait visualiser, améliorer et gérer son quotidient</p>
-              <p>Le créateur de l'application soihaitait un Logo dynamique et parlant aux utilisateurs cible.</p>
+              <p>Garde Le Smile est une application pensé par un étudiant en informatique. Son but est de proposer une appli rassemblant planning, objectif, gestion de budget et d'hygiène de vie. Un lieu unique où chaque jeune pourrait visualiser, améliorer et gérer son quotidien</p>
+              <p>Le créateur de l'application souhaitait un Logo dynamique et parlant aux utilisateurs cible.</p>
               <p>J'ai tenté de transmettre sa demande de dynamisme au travers des couleurs et de créer un sentiment d'audace avec un sourire généreux et légèrement insolent.</p>
               <div class="row">
                 <div class="text-center mx-right" v-for="(icon, index) in this.progenyIcon" :key="index">
                   <li>
                     <SkillItem
-                      :height="50"
+                      class="small-icon"
                       :iconName="icon"
                       :iconWrapperClass="'p-3 fit-content mx-right'"
                     />
