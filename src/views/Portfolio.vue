@@ -12,16 +12,16 @@
       </div>
     </div>
     <div class="container padding-top">
-      <h2 class="white-text mt-5">Portfolio</h2>
+      <h2 class="white-text">Portfolio</h2>
       <p class="col-md-8 pl-0 white-text">
-        Que se soit au travers d'illustrations, d'interfaces attrayantes ou
-        encore dans la conception de la logique en arrière plan j'aime mettre ma
-        sensibilité et ma logique en application.
+        Que se soit au travers du graphisme ou
+        encore dans la conception de la logique en arrière plan <strong>j'aime mettre ma
+        sensibilité et ma logique en application</strong>.
       </p>
       <p class="col-md-8 pl-0 white-text">
         Si il y a bien un atout dans le métier de développeur, c'est la
-        possiblité de pratiquer des aspects de prime abord sans liens et qui
-        pourtant, se révèlent complémentaire.
+        possiblité de pratiquer des aspects de <strong>prime abord sans liens et qui
+        pourtant, se révèlent complémentaire</strong>.
       </p>
 
       <div class="row white-text justify-content-between">

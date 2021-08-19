@@ -12,6 +12,8 @@ import Coaventure from '@/views/development/Coaventure.vue';
 import Citation from '@/views/development/Citation.vue';
 import AlmaMater from '@/views/development/AlmaMater.vue';
 
+import NotFound from '@/views/NotFound.vue';
+
 Vue.use(Router);
 
 export const router = new Router({
@@ -77,6 +79,12 @@ export const router = new Router({
         path: '/developpement/alma-mater', 
         component: AlmaMater
       },
+      {
+        name: 'NotFound',
+        path: '/404',
+        component: NotFound
+      },
+      { path: '*', redirect: '/404' },
     ],
     scrollBehavior: function (to) {
       if (to.hash) {
@@ -85,4 +93,12 @@ export const router = new Router({
         }
       }
     },
+});
+
+router.beforeEach((to, from, next) => {
+  if (!to.matched.length) {
+    next('/notFound');
+  } else {
+    next();
+  }
 });

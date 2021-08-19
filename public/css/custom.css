@@ -93,13 +93,19 @@ section{
     height: 100vh;
 }
 
-#portfolio, #contact{
+#portfolio, #contact, #notFound{
     background: rgb(26,3,53);
     background: linear-gradient(153deg, rgba(26,3,53,1) 0%, rgba(83,6,154,1) 59%, rgba(86,0,167,1) 71%, rgba(84,4,158,1) 82%, rgba(79,5,149,1) 100%);
     min-height: 100vh;
     padding-bottom: 90px;
     position: relative;
+}
 
+#notFound{
+    background-image: url('/image/404.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .absolute-top-0{
@@ -552,6 +558,14 @@ input:checked + .switch:after {
     .small-icon img{
         width: 30px;
     }
+}
+
+
+@media only screen and (max-width: 651px) {
+    .about-card{
+        height: 1103px;
+    }
+    
 }
 
 @media only screen and (max-width: 1604px) {

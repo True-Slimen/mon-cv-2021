@@ -15,7 +15,7 @@
           <p>Ma première formation m'a incqulqué les bases avec l'élaboration de maquette, </p>
 
           <div class="row justify-content-between">
-            <article class="col-md-4 col-12">
+            <article class="col-md-3 col-sm-6 col-12">
               <h3 class="text-center mt-5 mb-3">CoAventure</h3>
               <div class="img-card-wrapper mb-5">
                 <router-link to="/developpement/coaventure">
@@ -27,7 +27,7 @@
                 </router-link>
               </div>
             </article>
-            <article class="col-md-4 col-12">
+            <article class="col-md-3 col-sm-6 col-12">
               <h3 class="text-center mt-5 mb-3">C!tation ?</h3>
               <div class="img-card-wrapper">
                 <router-link to="/developpement/citation">
@@ -39,8 +39,20 @@
                 </router-link>
               </div>
             </article>
-            <article class="col-md-4 col-12">
+            <article class="col-md-3 col-sm-6 col-12">
               <h3 class="text-center mt-5 mb-3">Alma Mater</h3>
+              <div class="img-card-wrapper">
+                <router-link to="/developpement/alma-mater">
+                  <img
+                    class="img-card"
+                    src="image/portfolio/developpement/alma-mater/cdp-thumbnail.jpg"
+                    alt="Logo Collège de Paris"
+                  />
+                </router-link>
+              </div>
+            </article>
+            <article class="col-md-3 col-sm-6 col-12">
+              <h3 class="text-center mt-5 mb-3">Site Cv</h3>
               <div class="img-card-wrapper">
                 <router-link to="/developpement/alma-mater">
                   <img

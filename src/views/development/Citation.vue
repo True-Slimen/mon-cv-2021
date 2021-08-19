@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="row">
-            <a class="mx-2" href="http://www.citation.developpeur-metatidj.fr/public/">
+            <a class="mx-2" href="http://www.citation.developpeur-metatidj.fr/">
               <button class="btn purple-btn rounded-50 mt-3 px-5">
                 Visiter
               </button>

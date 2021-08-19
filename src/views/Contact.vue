@@ -14,9 +14,11 @@
       <div class="container padding-top">
         <div class="row">
           <article class="col-md-6 col-sm-12 mt-5 z-index-100">
-            <h2 class="mb-3 white-text">Contact</h2>
-            <p class="white-text">Vous souhaitez me rencontrer ou vous avez une suggestion ?</p>
-            <p class="white-text">N'hésitez pas à laisser un message.</p>
+            <h2 class="white-text">Contat</h2>
+            <p class="col-md-8 pl-0 white-text">
+              Vous souhaiter en apprendre plus ou me contacter ? Vous avez remarqué une coquille ou avez une suggestion ?
+            </p>
+            <p class="col-md-8 pl-0 white-text">Vous êtes au bon endroit. Je vosu répondrez dans les plus brefs délais.</p>
             <form
               class="contact-form"
               @submit.prevent="onSubmit()"
