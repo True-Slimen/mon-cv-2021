@@ -6,9 +6,9 @@
           <NavDarkExternal />
         </header>
       </div>
-      <div class="margin-top-page">
+      <div class="padding-top">
         
-        <div class="container">
+        <div class="container mt-5">
           <h1>Développement</h1>
           <p>Activité coeur du métier, le Développement est un vaste domaine dont il est presque impossible d'atteindre le bout.</p>
           <p>J'ai commencé par la grande porte du web-design avant de découvrir la programmation en elle même.</p>

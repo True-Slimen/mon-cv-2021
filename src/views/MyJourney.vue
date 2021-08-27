@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="container padding-top">
-      <div class="row">
+      <div class="mt-5">
         <h2 class="col-12 p-0">Mon parcours</h2>
         <p class="col-md-8 pl-0">
           Après l'obtention d'un bac professionnel Création et Gestion d'une Exploitation Agricole dominante Élevage Ovin j'ai découvert le métier de développeur web.

@@ -28,10 +28,10 @@
         id="navbarNavDropdown"
       >
         <ul class="navbar-nav col-12 ml-auto">
-          <li class="nav-item ml-auto active row">
+          <li class="nav-item ml-auto first-nav-item active row">
             <a class="mx-auto" href="#presentation">Accueil</a>
           </li>
-          <li class="nav-item active row">
+          <li class="nav-item active">
             <a class="mx-auto" href="#skills">Mes compétences</a>
           </li>
           <li class="nav-item active dropdown">
@@ -56,10 +56,10 @@
               </router-link>
             </div>
           </li>
-          <li class="nav-item active row">
+          <li class="nav-item active disabled-row row">
             <a class="mx-auto" href="#my-journey">Mon parcours</a>
           </li>
-          <li class="nav-item row">
+          <li class="nav-item disabled-row row">
             <a class="mx-auto purple-btn px-3 py-0" href="#contact">Contact</a>
           </li>
         </ul>
@@ -69,5 +69,37 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return {
+      windowWidth: null,
+      itemToRemoveRow: null,
+    }
+  },
+  mounted(){
+    this.changeClass();
+    window.onresize = () => {
+        this.changeClass();
+    }
+  },
+  methods:{
+    changeClass(){
+      this.windowWidth = window.innerWidth;
+         this.itemToRemoveRow = document.getElementsByClassName('disabled-row');
+        console.log(this.windowWidth);
+          console.log(this.itemToRemoveRow);
+        if(this.windowWidth < 991){
+            console.log(this.windowWidth);
+            this.itemToRemoveRow.forEach(element => {
+              element.classList.remove("row");
+            });
+        }else if(this.windowWidth > 991){
+            console.log(this.windowWidth);
+            this.itemToRemoveRow.forEach(element => {
+              element.classList.add("row");
+            });
+        }
+    }
+  }
+};
 </script>

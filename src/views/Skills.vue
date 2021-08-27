@@ -1,78 +1,78 @@
 <template>
     <section id="skills">
-            <div class="cha-header-clip" aria-hidden="true">
-              <header class="cha-header">
-                <NavDark/>
-              </header>
-              <div class="cha-header-section">
-                <NavSectionDarkTwins
-                  :linkUp="'#'"
-                  :linkDown="'#portfolio'"
-                />
-              </div>
-            </div>
-        <div class="container padding-top">
-            <div class="mt-5">
-              <h2>Compétences</h2>
-              <p class="col-md-8 pl-0">Outre l'inséparable trio que forment <strong>Html</strong>, <strong>Css</strong> et <strong>Javascript</strong> je travail actuellement sur un stack full js avec Node et Vue en particulier. Cela ne veut pas dire que je ne connais pas le Php, avec qui j'ai réalisé en grande partie ma formation Développeur PHP d'application Web / Mobile.
-              </p>
-              <div>
-                <ul class="row col-md-5 mx-auto text-center">
-                  <div v-for="(icon, index) in this.iconBasicSkillArray" :key="index" class="mx-auto">
-                    <li>
-                      <SkillItem
-                        class="medium-icon"
-                        :iconName="icon"
-                        :iconWrapperClass="'p-3 fit-content mx-auto'"
-                      />
-                    </li>
-                  </div>
-                </ul>
-              </div>
-              <div class="row smooth-card">
-                <ul class="col-4 list-group text-center">
-                  <h5>Je travail avec au quotidient</h5>
-                  <div v-for="(icon, index) in this.iconDailySkillArray" :key="index">
-                    <li
-                      class="my-2"
-                    >
-                      <SkillItem
-                        class="medium-icon"
-                        :height="50"
-                        :iconName="icon"
-                      />
-                    </li>
-                  </div>
-                </ul>
-                <ul class="col-4 list-group text-center">
-                  <h5>J'ai eu à faire</h5>
-                  <div v-for="(icon, index) in this.iconOftenSkillArray" :key="index">
-                    <li
-                      class="my-2"
-                    >
-                      <SkillItem
-                        class="medium-icon"
-                        :iconName="icon"
-                      />
-                    </li>
-                  </div>
-                </ul>
-                <ul class="col-4 list-group text-center">
-                  <h5>J'aime particulièrement</h5>
-                  <div v-for="(icon, index) in this.iconPassionSkillArray" :key="index">
-                    <li
-                      class="my-2"
-                    >
-                      <SkillItem
-                        class="medium-icon"
-                        :iconName="icon"
-                      />
-                    </li>
-                  </div>
-                </ul>
-              </div>
-            </div>
+      <div class="cha-header-clip" aria-hidden="true">
+        <header class="cha-header">
+          <NavDark/>
+        </header>
+        <div class="cha-header-section">
+          <NavSectionDarkTwins
+            :linkUp="'#'"
+            :linkDown="'#portfolio'"
+          />
         </div>
+      </div>
+      <div class="container padding-top">
+        <div class="mt-5">
+          <h2>Compétences</h2>
+          <p class="col-md-8">Outre l'inséparable trio que forment <strong>Html</strong>, <strong>Css</strong> et <strong>Javascript</strong> je travail actuellement sur un stack full js avec Node et Vue en particulier. Cela ne veut pas dire que je ne connais pas le Php, avec qui j'ai réalisé en grande partie ma formation Développeur PHP d'application Web / Mobile.
+          </p>
+          <div>
+            <ul class="row col-md-5 mx-auto text-center">
+              <div v-for="(icon, index) in this.iconBasicSkillArray" :key="index" class="mx-auto">
+                <li>
+                  <SkillItem
+                    class="medium-icon"
+                    :iconName="icon"
+                    :iconWrapperClass="'p-3 fit-content mx-auto'"
+                  />
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div class="row smooth-card">
+            <ul class="col-4 list-group text-center">
+              <h5>Je travail avec au quotidient</h5>
+              <div v-for="(icon, index) in this.iconDailySkillArray" :key="index">
+                <li
+                  class="my-2"
+                >
+                  <SkillItem
+                    class="medium-icon"
+                    :height="50"
+                    :iconName="icon"
+                  />
+                </li>
+              </div>
+            </ul>
+            <ul class="col-4 list-group text-center">
+              <h5>J'ai eu à faire</h5>
+              <div v-for="(icon, index) in this.iconOftenSkillArray" :key="index">
+                <li
+                  class="my-2"
+                >
+                  <SkillItem
+                    class="medium-icon"
+                    :iconName="icon"
+                  />
+                </li>
+              </div>
+            </ul>
+            <ul class="col-4 list-group text-center">
+              <h5>J'aime particulièrement</h5>
+              <div v-for="(icon, index) in this.iconPassionSkillArray" :key="index">
+                <li
+                  class="my-2"
+                >
+                  <SkillItem
+                    class="medium-icon"
+                    :iconName="icon"
+                  />
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 </template>
 

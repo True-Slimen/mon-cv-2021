@@ -3,7 +3,7 @@
     <div class="row col-12 mx-auto">
       <div class="col-1 row">
         <a class="navbar-brand mx-auto" href="/">
-          <img src="image/touche-purple-PETIT.svg" alt="" />
+          <img src="image/touche-purple-PETIT.svg" alt="logo metatidj" />
         </a>
       </div>
       <button
@@ -28,12 +28,12 @@
         id="navbarNavDropdown"
       >
         <ul class="navbar-nav col-12 ml-auto">
-          <li class="nav-item ml-auto active row">
-            <router-link to="/" class="mx-auto">
+          <li class="nav-item ml-auto active first-nav-item row">
+            <router-link to="/">
               Accueil
             </router-link>
           </li>
-          <li class="nav-item active row">
+          <li class="nav-item active">
             <router-link to="/#skills" class="mx-auto">
               Mes compétences
             </router-link>
@@ -60,12 +60,12 @@
               </router-link>
             </div>
           </li>
-          <li class="nav-item active row">
+          <li class="nav-item active disabled-row row">
             <router-link to="/#my-journey" class="mx-auto">
               Mon parcours
             </router-link>
           </li>
-          <li class="nav-item row">
+          <li class="nav-item disabled-row row">
             <router-link to="/#contact" class="mx-auto purple-btn btn-outline px-3 py-0">
               Contact
             </router-link>
@@ -77,7 +77,39 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return {
+      windowWidth: null,
+      itemToRemoveRow: null,
+    }
+  },
+  mounted(){
+    this.changeClass();
+    window.onresize = () => {
+        this.changeClass();
+    }
+  },
+  methods:{
+    changeClass(){
+      this.windowWidth = window.innerWidth;
+         this.itemToRemoveRow = document.getElementsByClassName('disabled-row');
+        console.log(this.windowWidth);
+          console.log(this.itemToRemoveRow);
+        if(this.windowWidth < 991){
+            console.log(this.windowWidth);
+            this.itemToRemoveRow.forEach(element => {
+              element.classList.remove("row");
+            });
+        }else if(this.windowWidth > 991){
+            console.log(this.windowWidth);
+            this.itemToRemoveRow.forEach(element => {
+              element.classList.add("row");
+            });
+        }
+    }
+  }
+};
 </script>
 <style scoped>
   nav{

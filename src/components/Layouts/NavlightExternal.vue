@@ -28,12 +28,12 @@
         id="navbarNavDropdown"
       >
         <ul class="navbar-nav col-12 ml-auto">
-          <li class="nav-item ml-auto active row">
+          <li class="nav-item ml-auto first-nav-item active row">
             <router-link to="/#presentation" class="mx-auto">
               Accueil
             </router-link>
           </li>
-          <li class="nav-item active row">
+          <li class="nav-item active">
             <router-link to="/#skills" class="mx-auto">
               Mes compétences
             </router-link>
@@ -60,12 +60,12 @@
               </router-link>
             </div>
           </li>
-          <li class="nav-item active row">
+          <li class="nav-item active disabled-row row">
             <router-link to="/#my-journey" class="mx-auto">
               Mon parcours
             </router-link>
           </li>
-          <li class="nav-item row">
+          <li class="nav-item disabled-row row">
             <router-link to="/#contact" class="mx-auto">
               Contact
             </router-link>
@@ -77,5 +77,37 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return {
+      windowWidth: null,
+      itemToRemoveRow: null,
+    }
+  },
+  mounted(){
+    this.changeClass();
+    window.onresize = () => {
+        this.changeClass();
+    }
+  },
+  methods:{
+    changeClass(){
+      this.windowWidth = window.innerWidth;
+         this.itemToRemoveRow = document.getElementsByClassName('disabled-row');
+        console.log(this.windowWidth);
+          console.log(this.itemToRemoveRow);
+        if(this.windowWidth < 991){
+            console.log(this.windowWidth);
+            this.itemToRemoveRow.forEach(element => {
+              element.classList.remove("row");
+            });
+        }else if(this.windowWidth > 991){
+            console.log(this.windowWidth);
+            this.itemToRemoveRow.forEach(element => {
+              element.classList.add("row");
+            });
+        }
+    }
+  }
+};
 </script>

@@ -6,8 +6,8 @@
           <NavDarkExternal />
         </header>
       </div>
-      <div class="margin-top-page">
-        <div class="container">
+      <div class="padding-top">
+        <div class="container mt-5">
           <h1>Illustrations</h1>
           <h3 class="mt-5">
             Illustration de style "Flatscape"

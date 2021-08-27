@@ -6,14 +6,14 @@
           <NavDarkExternal />
         </header>
       </div>
-      <div class="margin-top-page">
-        <div class="container">
+      <div class="padding-top">
+        <div class="container mt-5">
           <article class="col-md-7 col-sm-12 mb-5">
-            <h3 class="mt-5">
+            <h3>
               Parallax
             </h3>
             <p>
-              Les possibilités offertent par les parallaxs sont infinis.
+              Les possibilités offertent par les parallax sont infinis.
             </p>
             <p>
               Avec des visuels fort et bien placés on donne de la profondeur au site tout en offrant une touche d'interactivité à l'utilisateur, le tout au service du contenu.

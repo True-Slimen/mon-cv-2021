@@ -2,9 +2,9 @@
   <section id="footer">
     <footer class="container">
       <div class="row">
-        <div class="col-4">
+        <div class="col-md-4">
           <h5>One Page</h5>
-          <ul class="footer-nav col-12">
+          <ul class="footer-nav col-12 mb-0">
             <li class="footer-nav-item  active row">
               <small><a class="" href="#presentation">Accueil</a></small>
             </li>
@@ -23,7 +23,11 @@
           </ul>
         </div>
 
-        <div class="col-4 portfolio-footer">
+        <div class="justify-content-center footer-hr col-12">
+          <hr>
+        </div>
+
+        <div class="col-md-4 portfolio-footer">
           <h5>Portfolio</h5>
           <h6 class="mt-3">Graphisme</h6>
           <ul class="footer-nav col-12">
@@ -53,7 +57,11 @@
           </ul>
         </div>
 
-        <div class="col-4 row footer-icon-wrapper">
+        <div class="justify-content-center footer-hr col-12">
+          <hr>
+        </div>
+
+        <div class="col-md-4 row footer-icon-wrapper">
           <kinesis-container class="col-12 height-content footer-icon">
           <p class="p-0 m-0 height-content">Visiter mon Git ?
              <kinesis-element :strength="15" type="depth">
